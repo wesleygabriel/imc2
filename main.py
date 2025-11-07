@@ -4,9 +4,6 @@ from flask import Flask, send_file, render_template
 
 
 app = Flask(__name__, static_folder='src/static')
-# ou
-# app = Flask(__name__)
-# app.static_folder = 'src/static'
 
 
 # Página inicial
@@ -19,12 +16,6 @@ def index():
 @app.route('/favicon.ico')
 def favicon():
     return send_file('src/static/icons/favicon.ico', mimetype='image/vnd.microsoft.icon')
-
-
-# Rota genérica para a calculadora
-@app.route('/<op>/<int:a>/<int:b>')
-def oper(op, a, b):
-    return render_template('math.html')
 
 
 def main():
