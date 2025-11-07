@@ -1,12 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello World</title>
-  </head>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Bem-estar & Fitness</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" href="/static/icons/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Portal Saúde & Fitness</h1>
+        <nav>
+            <a href="/">Início</a>
+            <a href="/login">Login</a>
+            <a href="/profile">Perfil</a>
+            <a href="/about">Sobre</a>
+        </nav>
+    </header>
+    <main>
+        <div class="banner">
+            <img src="https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Pessoa levantando peso">
+            <img src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Pessoa se exercitando">
+        </div>
+        <h2>Bem-vindo ao seu espaço de bem-estar</h2>
+        <p>Explore ferramentas para melhorar sua saúde física e mental.</p>
 
-  <body>
-    <h1>Hello World</h1>
-  </body>
+        <div class="calculator">
+            <h2>Calculadora</h2>
+            <form id="calc-form">
+                <input type="number" id="a" placeholder="Valor A (Ex: 10)" required>
+                <select id="op">
+                    <option value="soma">Soma</option>
+                    <option value="sub">Subtração</option>
+                    <option value="mul">Multiplicação</option>
+                    <option value="div">Divisão</option>
+                </select>
+                <input type="number" id="b" placeholder="Valor B (Ex: 5)" required>
+                <button type="submit">Calcular</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        &copy; 2024 Saúde & Fitness
+    </footer>
+    <script src="/static/js/index.js"></script>
+</body>
 </html>
