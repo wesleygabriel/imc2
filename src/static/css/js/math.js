@@ -13,15 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const num2 = parseFloat(pathParts[pathParts.length - 1]);
 
     const operations = {
-        soma: { name: 'Adição', symbol: '+' },
-        sub: { name: 'Subtração', symbol: '-' },
-        mul: { name: 'Multiplicação', symbol: '*' },
-        div: { name: 'Divisão', symbol: '/' }
+        imc: { name: 'Calculo IMC', symbol: '' },
     };
 
-    const { name, symbol } = 
-    operations[operation] || { name: 'Operação Desconhecida', symbol: '?' };
-
+   
     function calculate(op, n1, n2) {
         if (isNaN(n1) || isNaN(n2)) {
             return {
@@ -32,17 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let result;
         switch (op) {
-            case 'soma':
-                result = n1 + n2;
-                break;
-            case 'sub':
-                result = n1 - n2;
-                break;
-            case 'mul':
-                result = n1 * n2;
-                break;
-            case 'div':
-                result = n2 !== 0 ? n1 / n2 : 'Erro: Divisão por zero';
+            case 'imc':
+                result = n2**2/n1;
                 break;
             default:
                 result = 'Operação inválida';
@@ -50,13 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return {
             result: result,
-            operationText: `${n1} ${symbol} ${n2}`
         };
     }
 
     const { result, operationText } = calculate(operation, num1, num2);
 
-    document.getElementById('operation-name').innerText = name;
     document.getElementById('operation-text').innerText = operationText;
     document.getElementById('result').innerText = result;
 
