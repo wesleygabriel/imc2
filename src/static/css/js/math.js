@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const operation = pathParts[1];
     const num1 = parseFloat(pathParts[2]);
     const num2 = parseFloat(pathParts[3]);
+    
+
 
     const operations = {
         imc: { name: 'Cálculo de IMC', symbol: '' },
@@ -44,4 +46,5 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         document.getElementById('result-container').classList.add('show');
     }, 100);
+   
 });

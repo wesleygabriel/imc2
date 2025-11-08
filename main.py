@@ -17,7 +17,11 @@ def index():
 def favicon():
     return send_file('src/static/icons/favicon.ico', mimetype='image/vnd.microsoft.icon')
 
+@app.route('/imc/<peso>/<altura>')
+def imc(peso, altura):
+    return render_template('math.html')
 
+    
 def main():
     port = int(os.environ.get('PORT', 5000))
     app.run(debug=True, host='0.0.0.0', port=port)
